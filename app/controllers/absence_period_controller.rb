@@ -5,6 +5,10 @@ class AbsencePeriodController < ApplicationController
     def new
     end
     
+    def index
+        @periods = AbsencePeriod.all
+    end
+    
     def show
     end
     

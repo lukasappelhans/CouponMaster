@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+AbsencePeriod.create(user_id: 1, startdate: 5.minutes.ago, enddate: 5.minutes.ago)
