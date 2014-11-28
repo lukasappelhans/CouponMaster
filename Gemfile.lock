@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: b0c93d9e5cac3d3bb6d6f1d7ac57adbba3d025c1
+  branch: tarruda
+  specs:
+    datetimepicker-rails (3.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,6 +46,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    date_validator (0.7.1)
+      activemodel
     devise (3.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -63,6 +72,8 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     minitest (5.4.3)
+    momentjs-rails (2.8.3)
+      railties (>= 3.1)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
     rack (1.5.2)
@@ -133,10 +144,13 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (= 3.2.0.2)
   coffee-rails (~> 4.0.0)
+  date_validator (~> 0.7.1)
+  datetimepicker-rails (>= 3.0.0)!
   devise
   font-awesome-sass (~> 4.2.0)
   jbuilder (~> 2.0)
   jquery-rails
+  momentjs-rails (>= 2.8.1)
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

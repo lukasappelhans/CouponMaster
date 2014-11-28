@@ -48,3 +48,9 @@ gem 'font-awesome-sass', '~> 4.2.0'
 
 gem 'will_paginate-bootstrap'
 
+gem 'momentjs-rails', '>= 2.8.1'
+
+gem 'datetimepicker-rails', '>= 3.0.0', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git', :branch => 'tarruda'
+
+gem 'date_validator', '~> 0.7.1'
+
