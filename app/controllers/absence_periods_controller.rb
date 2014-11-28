@@ -22,7 +22,18 @@ class AbsencePeriodsController < ApplicationController
     def destroy
     end
     
+    def edit
+        @absence_period = current_user.absence_periods.find(params[:id])
+    end
+    
     def update
+        @period = current_user.absence_periods.find(params[:id])
+ 
+        if @period.update(absence_period_params)
+            redirect_to @period
+        else
+            render 'edit'
+        end
     end
     
 
