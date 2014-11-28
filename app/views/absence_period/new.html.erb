@@ -1,4 +1,4 @@
-<%= simple_form_for @absence_period, :url => new_absence_period_path(@absence_period) do |f| %>
+<%= simple_form_for @absence_period, :url => "/absence_period" do |f| %>
     <%= f.input :startdate, :as => :datetime_picker, label: "Start date", :required => false %> 
     <%= f.input :enddate, :as => :datetime_picker, label: "End date", :required => false %>
     <%= f.button :submit, "Create absence period", class: "btn-success" %>

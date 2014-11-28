@@ -3,6 +3,8 @@ class AbsencePeriodController < ApplicationController
     
     def create
         @absence_period = current_user.absence_periods.build(absence_period_params)
+        @absence_period.save
+        render @absence_period
     end
     
     def new
