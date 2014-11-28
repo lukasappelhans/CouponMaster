@@ -1,7 +1,7 @@
 class CreatePromotions < ActiveRecord::Migration
   def change
     create_table :promotions do |t|
-      t.referecnces :product, index: true
+      t.references :product, index: true
       t.datetime :startdate
       t.datetime :enddate
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124134839) do
+ActiveRecord::Schema.define(version: 20141124134738) do
 
   create_table "absence_periods", force: true do |t|
     t.integer  "user_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20141124134839) do
     t.datetime "updated_at"
   end
 
-  create_table "promocions", force: true do |t|
+  create_table "promotions", force: true do |t|
     t.integer  "product_id"
     t.datetime "startdate"
     t.datetime "enddate"
@@ -47,12 +47,7 @@ ActiveRecord::Schema.define(version: 20141124134839) do
     t.datetime "updated_at"
   end
 
-  add_index "promocions", ["product_id"], name: "index_promocions_on_product_id"
-
-  create_table "promotions", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "promotions", ["product_id"], name: "index_promotions_on_product_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
