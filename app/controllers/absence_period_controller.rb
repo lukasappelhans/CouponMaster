@@ -8,10 +8,11 @@ class AbsencePeriodController < ApplicationController
     end
     
     def index
-        @periods = AbsencePeriod.all
+        @periods = current_user.absence_periods.all
     end
     
     def show
+        @period = current_user.absence_periods.find(params[:id])
     end
     
     def destroy
