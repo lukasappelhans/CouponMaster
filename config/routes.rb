@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :absence_periods
+  resources :promotions, only: [:show, :index, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
