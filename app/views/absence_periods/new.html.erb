@@ -1,6 +1,10 @@
-<%= simple_form_for @absence_period do |f| %>
-    <%= f.input :startdate, :as => :datetime_picker, label: "Start date", :required => false %> 
-    <%= f.input :enddate, :as => :datetime_picker, label: "End date", :required => false %>
-    <%= f.button :submit, "Create absence period", class: "btn-success" %>
-    <%= link_to "Cancel", :back, :class => "btn btn-danger" %>
-<% end %>
+<%= render partial: 'shared/menu' %>
+
+<div class="container">
+    <%= simple_form_for @absence_period do |f| %>
+        <%= f.input :startdate, :as => :datetime_picker, label: "Start date", :required => false %> 
+        <%= f.input :enddate, :as => :datetime_picker, label: "End date", :required => false %>
+        <%= f.button :submit, "Create absence period", class: "btn-success" %>
+        <%= link_to "Cancel", :back, :class => "btn btn-danger" %>
+    <% end %>
+</div>

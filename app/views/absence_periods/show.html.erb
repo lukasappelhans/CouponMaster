@@ -1,2 +1,6 @@
-<%= @period.startdate.to_s %>
-<%= link_to 'Edit', edit_absence_period_path(@period) %>
+<%= render partial: 'shared/menu' %>
+
+<div class="container">
+    <%= @period.startdate.to_s %>
+    <%= link_to 'Edit', edit_absence_period_path(@period) %>
+</div>
