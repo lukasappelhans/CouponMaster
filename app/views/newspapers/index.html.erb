@@ -1,7 +1,10 @@
 <%= render partial: 'shared/menu' %>
 
 <div class="container">
-
-    Newspapers test
-
+    <div class="list-group">
+        <div class="list-group-item active">
+            <h4 class="list-group-item-heading">Newspapers</h4>
+        </div>
+        <%= render @newspapers %>
+    </div>
 </div>
