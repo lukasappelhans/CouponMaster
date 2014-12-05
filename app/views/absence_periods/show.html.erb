@@ -1,6 +1,9 @@
 <%= render partial: 'shared/menu' %>
 
 <div class="container">
-    <%= @period.startdate.to_s %>
-    <%= link_to 'Edit', edit_absence_period_path(@period) %>
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Absence period</h4>
+        <p>You configured a period of absence from <%= @period.startdate.to_s %> to <%= @period.enddate.to_s %></p>
+        <%= link_to 'Edit', edit_absence_period_path(@period), :class => "btn btn-primary" %>
+    </div>
 </div>

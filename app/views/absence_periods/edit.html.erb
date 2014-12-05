@@ -1,15 +1,17 @@
 <%= render partial: 'shared/menu' %>
 
 <div class="container">
-    <%= simple_form_for @absence_period, method: :patch do |f| %>
-        <div class="form-group">
-            <h3>Edit absence period</h3>
-        </div>
-        <%= f.input :startdate, :as => :datetime_picker, label: "Start date", :required => false %> 
-        <%= f.input :enddate, :as => :datetime_picker, label: "End date", :required => false %>
-        <div class="form-group btn-group pull-right" role="group" aria-label="...">
-            <%= link_to "Cancel", :back, :class => "btn btn-danger" %>
-            <%= f.button :submit, "Create absence period", class: "btn-success" %>
-        </div>
-    <% end %>
+    <div class="col-md-6 col-md-offset-3">
+        <%= simple_form_for @absence_period, method: :patch do |f| %>
+            <div class="form-group">
+                <h3>Edit absence period</h3>
+            </div>
+            <%= f.input :startdate, :as => :datetime_picker, label: "Start date", :required => false %> 
+            <%= f.input :enddate, :as => :datetime_picker, label: "End date", :required => false %>
+            <div class="form-group btn-group pull-right" role="group" aria-label="...">
+                <%= link_to "Cancel", :back, :class => "btn btn-danger" %>
+                <%= f.button :submit, "Edit absence period", class: "btn-success" %>
+            </div>
+        <% end %>
+    </div>
 </div>
