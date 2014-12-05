@@ -1,5 +1,10 @@
-<% if current_user.admin? %>Hello admin!<% end %>
+<%= render partial: 'shared/menu' %>
 
-<div class="list-group">
-    <%= render @periods %>
+<div class="container">
+    <div class="list-group">
+        <div class="list-group-item active">
+            <h4 class="list-group-item-heading">Absence periods</h4>
+        </div>
+        <%= render @periods %>
+    </div>
 </div>
