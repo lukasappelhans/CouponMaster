@@ -1,4 +1,6 @@
 class PromotionsController < ApplicationController
+    before_action :authenticate_user!
+    
     def index
     end
     
@@ -6,6 +8,9 @@ class PromotionsController < ApplicationController
     end
     
     def new
+        unless current_user.admin? 
+            redirect_to "/promotions" and return
+        end
     end
     
     def create

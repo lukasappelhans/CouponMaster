@@ -3,5 +3,8 @@
 <div class="container">
 
     Index test
-
+    
+    <% if current_user.admin? %>
+        <a href="/promotions/new" class="btn btn-primary">New</a>
+    <% end %>
 </div>
