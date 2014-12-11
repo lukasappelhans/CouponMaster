@@ -1,13 +1,15 @@
 <%= render partial: 'shared/menu' %>
 
 <div class="container">
-    <div class="list-group">
-        <div class="list-group-item active">
-            <h4 class="list-group-item-heading">Promotions</h4>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="list-group">
+            <div class="list-group-item active">
+                <h4 class="list-group-item-heading">Promotions</h4>
+            </div>
+            <%= render @promotions %>
         </div>
-        <%= render @promotions %>
+        <% if current_user.admin? %>
+            <a href="/promotions/new" class="btn btn-primary">New</a>
+        <% end %>
     </div>
-    <% if current_user.admin? %>
-        <a href="/promotions/new" class="btn btn-primary">New</a>
-    <% end %>
 </div>

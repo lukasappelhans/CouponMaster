@@ -54,3 +54,5 @@ gem 'datetimepicker-rails', '>= 3.0.0', :git => 'git://github.com/zpaulovics/dat
 
 gem 'date_validator', '~> 0.7.1'
 
+gem 'rails-i18n'
+

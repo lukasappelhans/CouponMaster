@@ -3,8 +3,10 @@ class AbsencePeriodsController < ApplicationController
     
     def create
         @absence_period = current_user.absence_periods.build(absence_period_params)
-        @absence_period.save
-        redirect_to @absence_period
+        if @absence_period.save
+            redirect_to @absence_period and return
+        end
+        render 'new'
     end
     
     def new
@@ -27,10 +29,10 @@ class AbsencePeriodsController < ApplicationController
     end
     
     def update
-        @period = current_user.absence_periods.find(params[:id])
+        @absence_period = current_user.absence_periods.find(params[:id])
  
-        if @period.update(absence_period_params)
-            redirect_to @period
+        if @absence_period.update(absence_period_params)
+            redirect_to @absence_period
         else
             render 'edit'
         end

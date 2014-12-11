@@ -20,8 +20,12 @@ class PromotionsController < ApplicationController
     def create
         @product = Product.new(product_params)
         @promotion = @product.promotions.build(promotion_params)
-        @promotion.save
-        redirect_to "/promotions"
+        if @promotion.save and @product.save
+            redirect_to "/promotions" and return
+        end
+        @promotion.destroy
+        @product.destroy
+        render 'new'
     end
     
 
