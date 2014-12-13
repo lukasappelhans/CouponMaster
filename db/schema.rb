@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205123559) do
+ActiveRecord::Schema.define(version: 20141213001137) do
 
   create_table "absence_periods", force: true do |t|
     t.integer  "user_id"
@@ -30,6 +30,11 @@ ActiveRecord::Schema.define(version: 20141205123559) do
   end
 
   add_index "newspapers", ["product_id"], name: "index_newspapers_on_product_id"
+
+  create_table "newspapers_users", id: false, force: true do |t|
+    t.integer "newspaper_id", null: false
+    t.integer "user_id",      null: false
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"

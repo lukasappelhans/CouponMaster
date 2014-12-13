@@ -1,4 +1,8 @@
 <div class="list-group-item">
-    <h4 class="list-group-item-heading"><%= newspaper.product.name %></h4>
+    <h4 class="list-group-item-heading"><%= newspaper.product.name %>
+        <% if newspaper.users.include?(current_user) %>
+            <span class="glyphicon glyphicon-saved pull-right" aria-hidden="true"></span>
+        <% end %>
+    </h4>
     <p class="list-group-item-text"><%= newspaper.product.description %></p>
 </div>
