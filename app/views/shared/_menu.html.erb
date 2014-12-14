@@ -10,8 +10,11 @@
         </button>
         <a class="navbar-brand" href="/">CouponMaster</a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
+		
+		<a class="navbar-text"> Hello, <%= current_user.name %> <%= current_user.surname %> </a>
+												
+        
+		<!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right hovereffect">
             <li><a href="/absence_periods">Absence periods</a></li>

@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-testuser = User.create!(id: 1, email: "test@test.org", password: "password", password_confirmation: "password", admin: false)
-User.create!(id: 2, email: "admin@test.org", password: "password", password_confirmation: "password", admin: true)
+testuser = User.create!(id: 1, email: "test@test.org", name: "Guybrush", surname: "Threepwood", password: "password", password_confirmation: "password", admin: false)
+User.create!(id: 2, email: "admin@test.org", name: "Elaine", surname: "Marley", password: "password", password_confirmation: "password", admin: true)
 AbsencePeriod.create!(user_id: 1, startdate: 5.minutes.ago, enddate: 10.days.from_now)
 AbsencePeriod.create!(user_id: 1, startdate: 15.days.from_now, enddate: 25.days.from_now)
 
