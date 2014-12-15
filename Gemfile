@@ -65,3 +65,4 @@ gem 'date_validator', '~> 0.7.1'
 
 gem 'rails-i18n'
 
+gem 'twitter-bootstrap-rails-confirm'
