@@ -4,7 +4,9 @@
     <div class="col-md-6 col-md-offset-3">
         <h4>Absence period</h4>
         <p>You configured a period of absence from <%= @period.startdate.strftime("%D") %> to <%= @period.enddate.strftime("%D") %></p>
-        <%= link_to "Back", absence_periods_path, :class => "btn btn-danger" %>
+        <%= link_to 'Back', absence_periods_path, :class => "btn btn-default" %>
+        <%= link_to 'Delete', absence_period_path(@period),
+                    method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
         <%= link_to 'Edit', edit_absence_period_path(@period), :class => "btn btn-primary" %>
     </div>
 </div>

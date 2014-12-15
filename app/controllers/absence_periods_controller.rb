@@ -22,6 +22,10 @@ class AbsencePeriodsController < ApplicationController
     end
     
     def destroy
+        @absence_period = current_user.absence_periods.find(params[:id])
+        @absence_period.destroy
+        
+        redirect_to absence_periods_path
     end
     
     def edit
